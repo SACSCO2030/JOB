@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+     <record id="view_pos_config_form_inherit" model="ir.ui.view">
+        <field name="name">POS configuration</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[4]" position="after">
+                <h2>Whatsapp</h2>
+                <div class="row mt16 o_settings_container" id="whatsapp">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="iface_whatsapp_msg"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="iface_whatsapp_msg" string="Whatsapp message"/>
+                            <div class="text-muted">
+                                Send Whatsapp message to specific customer.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="iface_whatsapp_grp_msg"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="iface_whatsapp_grp_msg" string="Send messages"/>
+                            <div class="text-muted">
+                                Send messages.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="iface_whatsapp_receipt"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="iface_whatsapp_receipt" string="Whatsapp POS Receipt"/>
+                            <div class="text-muted">
+                                Send POS receipt as a Whatsapp message to customer Whatsapp number.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="iface_whatsapp_receipt_auto"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="iface_whatsapp_receipt_auto" string="Whatsapp POS Receipt Auto"/>
+                            <div class="text-muted">
+                                Send POS receipt as a Whatsapp message directly to customer Whatsapp number.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="iface_whatsapp_msg_template"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="iface_whatsapp_msg_template" string="Whatsapp Template"/>
+                            <div class="text-muted">
+                                Select pre-configured Whatsapp message template.
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

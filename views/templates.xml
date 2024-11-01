@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="assets" inherit_id="point_of_sale.assets">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/pragmatic_odoo_pos_whatsapp_integration/static/src/js/models.js"/>
+            <script type="text/javascript" src="/pragmatic_odoo_pos_whatsapp_integration/static/src/js/Popups/WhatsAppSendMsgPopup.js"/>
+            <script type="text/javascript" src="/pragmatic_odoo_pos_whatsapp_integration/static/src/js/Popups/WhatsAppGroupSelectPopup.js"/>
+            <script type="text/javascript" src="/pragmatic_odoo_pos_whatsapp_integration/static/src/js/Screens/ClientListScreen/ClientListScreen.js"/>
+            <script type="text/javascript" src="/pragmatic_odoo_pos_whatsapp_integration/static/src/js/Screens/ProductScreen/ControlButtons/GroupWhatsappMessageButton.js"/>
+            <script type="text/javascript" src="/pragmatic_odoo_pos_whatsapp_integration/static/src/js/Screens/ReceiptScreen/ReceiptScreen.js"/>
+        </xpath>
+        <xpath expr="//link[@id='pos-stylesheet']" position="after">
+            <link rel="stylesheet" href="/pragmatic_odoo_pos_whatsapp_integration/static/src/css/pos_whatsapp_integration.css"/>
+        </xpath>
+    </template>
+
+</odoo>

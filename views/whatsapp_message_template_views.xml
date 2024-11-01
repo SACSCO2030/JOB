@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="whatsapp_message_template_tree" model="ir.ui.view">
+        <field name="name">whatsapp.message.template.tree</field>
+        <field name="model">whatsapp.message.template</field>
+        <field name="arch" type="xml">
+            <tree string="Whatsapp Template">
+                <field name="name"/>
+                <field name="message"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="whatsapp_message_template_form" model="ir.ui.view">
+        <field name="name">whatsapp.message.template.form</field>
+        <field name="model">whatsapp.message.template</field>
+        <field name="arch" type="xml">
+            <form string="Whatsapp Template">
+                <sheet>
+                    <group>
+                        <field name="name" placeholder="Add a short name..." colspan="2"/>
+                    </group>
+                    <group string="Message">
+                        <field name="message" placeholder="Add a message template..." nolabel="1" colspan="2"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_whatsapp_message_template_form" model="ir.actions.act_window">
+        <field name="name">Whatsapp Template</field>
+        <field name="res_model">whatsapp.message.template</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="whatsapp_message_template_tree"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a new message template
+          </p><p>
+            Define the pre defined Whatsapp message template that will be available on the POS UI.
+          </p>
+        </field>
+    </record>
+
+    <menuitem action="action_whatsapp_message_template_form" id="menu_whatsapp_message_template" name="Whatsapp Template"
+              parent="point_of_sale.menu_point_config_product"/>
+
+</odoo>
